@@ -1,0 +1,16 @@
+<svg width="180" height="120" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Painel solar">
+  <rect x="12" y="16" width="156" height="76" rx="12" fill="#0A2540" stroke="rgba(255,255,255,0.18)" />
+  <g stroke="rgba(255,255,255,0.18)" stroke-width="2">
+    <path d="M24 32h132" />
+    <path d="M24 48h132" />
+    <path d="M24 64h132" />
+    <path d="M24 80h132" />
+    <path d="M52 24v60" />
+    <path d="M80 24v60" />
+    <path d="M108 24v60" />
+    <path d="M136 24v60" />
+  </g>
+  <path d="M90 92v12" stroke="#FDB813" stroke-width="3" stroke-linecap="round" />
+  <path d="M70 106h40" stroke="#FDB813" stroke-width="3" stroke-linecap="round" />
+</svg>
+

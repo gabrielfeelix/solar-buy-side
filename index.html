@@ -1,0 +1,745 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A2540" />
+    <title>Manual Solar Buy-Side - Venda com Autoridade e Sem Guerra de Precos</title>
+    <meta name="description" content="Domine a perspectiva do comprador informado de energia solar e aumente sua conversao com metodo, argumentos e anexos tecnicos." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --c-navy: #0a2540;
+        --c-orange: #ff6b35;
+        --c-gold: #fdb813;
+        --c-white: #ffffff;
+        --c-gray-50: #f5f7fa;
+        --c-gray-400: #8b95a5;
+        --c-black: #1a1a1a;
+        --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.18);
+        --radius-md: 12px;
+        --radius-sm: 10px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Arial,
+          sans-serif;
+        color: var(--c-black);
+        background: var(--c-white);
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
+      }
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        padding: 80px 0;
+        color: var(--c-white);
+        background: radial-gradient(1100px 700px at 15% 20%, rgba(253, 184, 19, 0.14), transparent 55%),
+          radial-gradient(900px 600px at 85% 40%, rgba(255, 107, 53, 0.14), transparent 60%),
+          linear-gradient(180deg, #071a2d, #0a2540);
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 64px 64px;
+        opacity: 0.55;
+        mask-image: radial-gradient(600px 500px at 30% 35%, black, transparent 70%);
+        pointer-events: none;
+      }
+      .container {
+        width: min(1200px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conte&uacute;do</a>
+
+    <header class="site-header" data-elevate-on-scroll>
+      <div class="container header-inner">
+        <a class="brand" href="#topo" aria-label="Solar Buy-Side - In&iacute;cio">
+          <img src="assets/img/logo-solar-buy-side.svg" width="160" height="28" alt="Solar Buy-Side" />
+        </a>
+        <nav class="header-actions" aria-label="A&ccedil;&otilde;es principais">
+          <a class="btn btn-ghost" href="#conteudo-manual">Ver conte&uacute;do</a>
+          <a class="btn btn-primary" href="#oferta" data-track="cta-header">Garantir agora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- SE&Ccedil;&Atilde;O 1: HERO -->
+      <section id="topo" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal">
+              <span class="pill pill-gold">Pr&eacute;-venda Profissional</span>
+              <span class="eyebrow-sep" aria-hidden="true">&bull;</span>
+              <span class="muted">Estrat&eacute;gia + t&eacute;cnica + posicionamento</span>
+            </p>
+
+            <h1 class="h1 reveal">Transforme-se no Vendedor Ideal para o Comprador Informado de Energia Solar</h1>
+            <p class="subhead reveal">Domine a perspectiva do comprador e fuja da guerra de pre&ccedil;os com o Manual Buy-Side.</p>
+
+            <div class="hero-cta reveal">
+              <a class="btn btn-cta" href="#oferta" data-track="cta-hero">GARANTA SUA VANTAGEM AGORA</a>
+              <p class="helper">
+                <span class="helper-dot" aria-hidden="true"></span>
+                Acesso imediato + garantia de 7 dias
+              </p>
+            </div>
+
+            <ul class="trust-badges reveal" aria-label="Destaques do manual">
+              <li class="trust-badge">
+                <span class="trust-number">130+</span>
+                <span class="trust-label">p&aacute;ginas</span>
+              </li>
+              <li class="trust-badge">
+                <span class="trust-number">160</span>
+                <span class="trust-label">t&oacute;picos</span>
+              </li>
+              <li class="trust-badge">
+                <span class="trust-number">7</span>
+                <span class="trust-label">dias de garantia</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Visual do manual">
+            <figure class="mockup">
+              <img
+                src="assets/img/mockup-manual-3d.svg"
+                width="640"
+                height="520"
+                alt="Mockup 3D do Manual Solar Buy-Side"
+                loading="eager"
+                decoding="async"
+              />
+              <figcaption class="sr-only">Mockup ilustrativo. Substitua por imagens reais quando dispon&iacute;vel.</figcaption>
+            </figure>
+
+            <div class="float float-1" aria-hidden="true">
+              <img src="assets/img/float-solar-panel.svg" width="180" height="120" alt="" loading="lazy" decoding="async" />
+            </div>
+            <div class="float float-2" aria-hidden="true">
+              <img src="assets/img/float-checklist.svg" width="180" height="120" alt="" loading="lazy" decoding="async" />
+            </div>
+            <div class="float float-3" aria-hidden="true">
+              <img src="assets/img/float-graph.svg" width="190" height="130" alt="" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 2: PROBLEMA -->
+      <section class="section section-white">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <h2 class="h2">O Mercado de Energia Solar Mudou &mdash; E Voc&ecirc; Precisa Mudar Tamb&eacute;m</h2>
+            <p class="lead">
+              O comprador ficou mais informado, mais t&eacute;cnico e mais criterioso. A venda deixou de ser "pre&ccedil;o + prazo" e virou
+              uma decis&atilde;o de risco, confian&ccedil;a e comprova&ccedil;&atilde;o.
+            </p>
+            <p class="lead">
+              Se a sua proposta n&atilde;o responde &agrave; jornada real do cliente, voc&ecirc; perde espa&ccedil;o para quem transmite clareza,
+              seguran&ccedil;a e autoridade &mdash; mesmo cobrando mais.
+            </p>
+          </div>
+
+          <div class="icon-grid reveal">
+            <article class="icon-card">
+              <div class="icon">
+                <img src="assets/img/icon-compare.svg" width="40" height="40" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="h3-sm">Compara propostas tecnicamente</h3>
+              <p class="body-sm">Compara propostas com crit&eacute;rios t&eacute;cnicos antes de escolher.</p>
+            </article>
+            <article class="icon-card">
+              <div class="icon">
+                <img src="assets/img/icon-analyze.svg" width="40" height="40" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="h3-sm">Analisa fornecedores com cuidado</h3>
+              <p class="body-sm">Analisa componentes, coer&ecirc;ncia do projeto e reputa&ccedil;&atilde;o do fornecedor.</p>
+            </article>
+            <article class="icon-card">
+              <div class="icon">
+                <img src="assets/img/icon-trust.svg" width="40" height="40" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="h3-sm">Decide por confian&ccedil;a</h3>
+              <p class="body-sm">Avalia confiabilidade, suporte e risco antes de fechar.</p>
+            </article>
+          </div>
+
+          <div class="callout callout-warn reveal" role="note">
+            <strong>Quem n&atilde;o entender essa jornada vai perder vendas.</strong>
+            <span>Voc&ecirc; n&atilde;o precisa vender mais barato &mdash; precisa vender melhor.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 3: SOLU&Ccedil;&Atilde;O -->
+      <section class="section section-gray">
+        <div class="container two-col">
+          <div class="col reveal">
+            <img
+              class="img-card"
+              src="assets/img/mockup-manual-3d.svg"
+              width="640"
+              height="520"
+              alt="Manual Solar Buy-Side em perspectiva"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="col reveal">
+            <h2 class="h2">Manual Solar Buy-Side: A Ferramenta Estrat&eacute;gica que Faltava</h2>
+            <p class="lead">
+              Um manual direto ao ponto para entender como o comprador avalia propostas, minimiza riscos e toma a decis&atilde;o &mdash; e como
+              voc&ecirc; deve conduzir esse processo.
+            </p>
+            <ul class="checklist" aria-label="Benef&iacute;cios">
+              <li>130+ p&aacute;ginas de conte&uacute;do t&eacute;cnico e estrat&eacute;gico</li>
+              <li>160 t&oacute;picos organizados para consulta r&aacute;pida</li>
+              <li>Metodologia em 4 fases para a jornada de compra</li>
+              <li>Anexos t&eacute;cnicos para tomada de decis&atilde;o</li>
+            </ul>
+            <div class="stack">
+              <a class="btn btn-secondary" href="#oferta" data-track="cta-solucao">QUERO DOMINAR A PERSPECTIVA BUY-SIDE</a>
+              <p class="fineprint">Pagamento seguro &bull; Conte&uacute;do aplic&aacute;vel no dia a dia &bull; Leitura consult&aacute;vel</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 4: P&Uacute;BLICO-ALVO -->
+      <section class="section section-white">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <h2 class="h2">Essencial Para Profissionais que Querem Sair da Guerra de Pre&ccedil;os</h2>
+            <p class="lead">Feito para quem precisa vender com clareza, seguran&ccedil;a e posicionamento &mdash; sem depender de desconto.</p>
+          </div>
+
+          <div class="card-grid-3 reveal">
+            <article class="card card-outline">
+              <div class="card-icon">
+                <img src="assets/img/icon-company.svg" width="44" height="44" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="h3">Empresas de Integra&ccedil;&atilde;o Solar</h3>
+              <p class="body">Aumente taxa de fechamento e valor percebido.</p>
+            </article>
+
+            <article class="card card-outline">
+              <div class="card-icon">
+                <img src="assets/img/icon-rocket.svg" width="44" height="44" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="h3">Empreendedores Iniciantes</h3>
+              <p class="body">Construa um neg&oacute;cio s&oacute;lido desde o primeiro dia.</p>
+            </article>
+
+            <article class="card card-outline">
+              <div class="card-icon">
+                <img src="assets/img/icon-sales.svg" width="44" height="44" alt="" aria-hidden="true" />
+              </div>
+              <h3 class="h3">Representantes Comerciais</h3>
+              <p class="body">Converta mais e reduza depend&ecirc;ncia de desconto.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 5: TRANSFORMA&Ccedil;&Atilde;O -->
+      <section class="section section-navy">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <h2 class="h2 h2-invert">Domine a Perspectiva do Comprador e Venda com Autoridade</h2>
+            <p class="lead lead-invert">Entenda a l&oacute;gica por tr&aacute;s da decis&atilde;o do cliente e conduza o processo com crit&eacute;rio.</p>
+          </div>
+
+          <div class="two-col cards-dark reveal">
+            <article class="card dark">
+              <h3 class="h3 h3-invert">O que o vendedor vai dominar</h3>
+              <ul class="bullets bullets-gold">
+                <li>Dores, obje&ccedil;&otilde;es e motiva&ccedil;&otilde;es do cliente</li>
+                <li>Postura consultiva, transparente e centrada no cliente</li>
+                <li>Valor t&eacute;cnico e econ&ocirc;mico da solu&ccedil;&atilde;o</li>
+              </ul>
+            </article>
+            <article class="card dark">
+              <h3 class="h3 h3-invert">Principais foco e habilidades</h3>
+              <ul class="bullets bullets-gold">
+                <li>Apresenta&ccedil;&otilde;es mais persuasivas e personalizadas</li>
+                <li>Confian&ccedil;a, conex&atilde;o e autoridade no processo</li>
+                <li>Taxa de convers&atilde;o aumentada</li>
+                <li>Menor depend&ecirc;ncia de desconto</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 6: PROVA SOCIAL (DEPOIMENTO) -->
+      <section class="section section-white">
+        <div class="container">
+          <div class="testimonial featured reveal" aria-label="Depoimento em destaque">
+            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+            <div class="testimonial-body">
+              <p class="quote">Em um m&ecirc;s fechei 5 sistemas novos</p>
+              <p class="body">
+                "Eu estava perdendo vendas no detalhe. O manual me ajudou a entender como o cliente compara propostas e o que realmente pesa na decis&atilde;o.
+                Passei a conduzir a conversa com mais crit&eacute;rio e seguran&ccedil;a &mdash; e o fechamento melhorou muito."
+              </p>
+              <div class="meta">
+                <div class="person">
+                  <img src="assets/img/photo-rodrigo.svg" width="64" height="64" alt="Foto do Rodrigo" loading="lazy" decoding="async" />
+                  <div>
+                    <div class="name">Rodrigo</div>
+                    <div class="role">Integrador &bull; S&atilde;o Paulo, SP</div>
+                  </div>
+                </div>
+                <div class="result">
+                  <span class="badge badge-verified">Resultado verificado</span>
+                  <div class="result-line"><strong>5 sistemas</strong> em 30 dias</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 7: CONTE&Uacute;DO DO MANUAL -->
+      <section id="conteudo-manual" class="section section-gray">
+        <div class="container asym">
+          <div class="asym-visual reveal">
+            <img
+              class="img-card"
+              src="assets/img/mockup-manual-open.svg"
+              width="720"
+              height="520"
+              alt="Manual aberto mostrando p&aacute;ginas internas"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="asym-copy reveal">
+            <h2 class="h2">Uma Imers&atilde;o Inovadora que Revela a Perspectiva do Cliente</h2>
+            <p class="lead">Um guia consult&aacute;vel, organizado e pronto para virar argumento na sua pr&oacute;xima proposta.</p>
+            <ul class="feature-list" aria-label="Detalhes do conte&uacute;do">
+              <li>Mais de 130 p&aacute;ginas com conte&uacute;do t&eacute;cnico e estrat&eacute;gico</li>
+              <li>160 t&oacute;picos organizados para consulta r&aacute;pida</li>
+              <li>Metodologia completa em 4 fases</li>
+              <li>Anexos t&eacute;cnicos que auxiliam na tomada de decis&atilde;o</li>
+            </ul>
+            <div class="stack">
+              <a class="btn btn-primary" href="#oferta" data-track="cta-conteudo">Quero a vers&atilde;o completa</a>
+              <p class="fineprint">Ideal para vender com clareza &bull; Reduz obje&ccedil;&otilde;es de &uacute;ltima hora</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 8: URG&Ecirc;NCIA -->
+      <section class="section section-urgency">
+        <div class="container centered reveal">
+          <h2 class="h2 h2-invert">O Tempo Est&aacute; Correndo &mdash; Garanta Sua Vantagem Agora</h2>
+          <p class="lead lead-invert">
+            Em um mercado competitivo, conhecimento &eacute; sua maior vantagem. N&atilde;o espere seus concorrentes terem acesso primeiro.
+          </p>
+
+          <div class="scarcity" aria-label="Escassez">
+            <div class="scarcity-title">Apenas <strong>1.000 unidades</strong> na Pr&eacute;-venda Profissional</div>
+            <div class="digit-row" aria-hidden="true">
+              <span class="digit">1</span><span class="digit">0</span><span class="digit">0</span><span class="digit">0</span>
+            </div>
+          </div>
+
+          <div class="stack stack-center">
+            <a class="btn btn-cta" href="#oferta" data-track="cta-urgencia">QUERO SAIR NA FRENTE</a>
+            <p class="fineprint fineprint-invert">Oferta e disponibilidade podem mudar sem aviso.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 9: OFERTA + PRE&Ccedil;O -->
+      <section id="oferta" class="section section-navy">
+        <div class="container centered">
+          <div class="section-head centered reveal">
+            <h2 class="h2 h2-invert">Investimento que Transforma Sua Abordagem de Vendas</h2>
+            <p class="lead lead-invert">Clareza, m&eacute;todo e autoridade para vender com crit&eacute;rio &mdash; sem "desconto pra fechar".</p>
+          </div>
+
+          <div class="pricing-card reveal" aria-label="Oferta">
+            <div class="pricing-top">
+              <span class="badge badge-best">Melhor oferta</span>
+              <span class="badge badge-guarantee">Garantia de 7 dias</span>
+            </div>
+
+            <div class="price">
+              <div class="price-main">
+                <span class="currency">R$</span>
+                <span class="amount">297</span>
+                <span class="cents">,00</span>
+              </div>
+              <div class="price-sub">ou 12x de <strong>R$ 29,90</strong></div>
+            </div>
+
+            <ul class="included" aria-label="O que est&aacute; incluso">
+              <li>Acesso imediato ao Manual Solar Buy-Side</li>
+              <li>130 p&aacute;ginas t&eacute;cnicas + 160 t&oacute;picos consult&aacute;veis</li>
+              <li>M&eacute;todo em 4 fases para a jornada de compra</li>
+              <li>Anexos t&eacute;cnicos exclusivos</li>
+            </ul>
+
+            <a class="btn btn-cta btn-full" href="#" data-track="cta-pagamento">GARANTIR MINHA OFERTA EXCLUSIVA AGORA</a>
+            <p class="fineprint">Troque o link do bot&atilde;o para o seu checkout (Hotmart/Kiwify/Eduzz/etc.).</p>
+
+            <div class="payments" aria-label="Formas de pagamento">
+              <img
+                src="assets/img/payment-badges.svg"
+                width="520"
+                height="48"
+                alt="Formas de pagamento: Visa, Mastercard, PIX e Boleto"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="security">
+              <div class="security-item">
+                <img src="assets/img/icon-lock.svg" width="18" height="18" alt="" aria-hidden="true" />
+                Compra segura
+              </div>
+              <div class="security-item">
+                <img src="assets/img/icon-shield.svg" width="18" height="18" alt="" aria-hidden="true" />
+                Satisfa&ccedil;&atilde;o garantida
+              </div>
+              <div class="security-item">
+                <img src="assets/img/icon-privacy.svg" width="18" height="18" alt="" aria-hidden="true" />
+                Privacidade protegida
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 10: O QUE VOC&Ecirc; VAI APRENDER -->
+      <section class="section section-white">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <h2 class="h2">Se Voc&ecirc; Ainda Tem D&uacute;vidas, Veja o Que Seus Clientes Aprender&atilde;o</h2>
+            <p class="lead">Entenda como o comprador pensa &mdash; e use isso para conduzir a venda com seguran&ccedil;a.</p>
+          </div>
+
+          <div class="two-col reveal">
+            <article class="card">
+              <h3 class="h3">O que o comprador vai dominar</h3>
+              <ul class="bullets">
+                <li>Conceitos essenciais para compra t&eacute;cnica e segura</li>
+                <li>Reconhecimento de marcas e distribuidores confi&aacute;veis</li>
+                <li>Crit&eacute;rios para sele&ccedil;&atilde;o de empresas s&eacute;rias</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="h3">Principais foco e habilidades</h3>
+              <ul class="bullets">
+                <li>An&aacute;lise de propostas com crit&eacute;rios t&eacute;cnicos</li>
+                <li>Avalia&ccedil;&atilde;o de reputa&ccedil;&atilde;o e suporte p&oacute;s-venda</li>
+                <li>Tomada de decis&atilde;o com seguran&ccedil;a e embasamento</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 11: MAIS PROVA SOCIAL -->
+      <section class="section section-gray">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <h2 class="h2">Vendedores Reais, Resultados Reais</h2>
+            <p class="lead">Substitua estes depoimentos por provas reais quando estiver pronto.</p>
+          </div>
+
+          <div class="testimonials-grid reveal">
+            <article class="testimonial card">
+              <div class="person small">
+                <img src="assets/img/photo-carlos.svg" width="48" height="48" alt="Foto do Carlos Belo" loading="lazy" decoding="async" />
+                <div>
+                  <div class="name">Carlos Belo</div>
+                  <div class="role">Belo Horizonte, MG</div>
+                </div>
+              </div>
+              <p class="quote-sm">&ldquo;O manual abriu meus olhos para os riscos.&rdquo;</p>
+              <p class="body-sm">Evitou perda de <strong>3 clientes</strong> ao corrigir pontos t&eacute;cnicos.</p>
+            </article>
+
+            <article class="testimonial card">
+              <div class="person small">
+                <img src="assets/img/photo-ana.svg" width="48" height="48" alt="Foto da Ana Martins" loading="lazy" decoding="async" />
+                <div>
+                  <div class="name">Ana Martins</div>
+                  <div class="role">Curitiba, PR</div>
+                </div>
+              </div>
+              <p class="quote-sm">&ldquo;Passei a vender com muito mais confian&ccedil;a.&rdquo;</p>
+              <p class="body-sm">Reduziu desconto e aumentou valor percebido.</p>
+            </article>
+
+            <article class="testimonial card">
+              <div class="person small">
+                <img src="assets/img/photo-paulo.svg" width="48" height="48" alt="Foto do Paulo Henrique" loading="lazy" decoding="async" />
+                <div>
+                  <div class="name">Paulo Henrique</div>
+                  <div class="role">Goi&acirc;nia, GO</div>
+                </div>
+              </div>
+              <p class="quote-sm">&ldquo;Minha proposta ficou mais t&eacute;cnica e simples.&rdquo;</p>
+              <p class="body-sm">Melhorou a apresenta&ccedil;&atilde;o e encurtou reuni&otilde;es.</p>
+            </article>
+
+            <article class="testimonial card">
+              <div class="person small">
+                <img src="assets/img/photo-luiza.svg" width="48" height="48" alt="Foto da Luiza Prado" loading="lazy" decoding="async" />
+                <div>
+                  <div class="name">Luiza Prado</div>
+                  <div class="role">Fortaleza, CE</div>
+                </div>
+              </div>
+              <p class="quote-sm">&ldquo;Agora eu sei o que o cliente quer ouvir.&rdquo;</p>
+              <p class="body-sm">Justificou investimento e aumentou fechamento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 12: SOBRE O AUTOR -->
+      <section class="section section-white">
+        <div class="container two-col">
+          <div class="col reveal">
+            <img class="img-card" src="assets/img/photo-francis.svg" width="560" height="560" alt="Foto de Francis Poloni" loading="lazy" decoding="async" />
+          </div>
+          <div class="col reveal">
+            <h2 class="h2">Criado Por Quem Viveu os Dois Lados da Mesa</h2>
+            <p class="lead"><span class="pill pill-navy">Consultor Buy-Side e Sell-Side</span></p>
+            <div class="prose">
+              <p>Atua&ccedil;&atilde;o desde 2018 no setor de integra&ccedil;&atilde;o fotovoltaica.</p>
+              <p>Experi&ecirc;ncia em consultoria de investimento e tomada de decis&atilde;o.</p>
+              <p>Assessorou compradores (Buy-Side) e vendedores (Sell-Side).</p>
+              <p>Especialista em decis&otilde;es inteligentes, seguras e embasadas.</p>
+            </div>
+            <div class="stack">
+              <a class="btn btn-primary" href="#oferta" data-track="cta-autor">Quero acessar o manual</a>
+              <p class="fineprint">Texto e foto podem ser trocados depois.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 13: &Uacute;LTIMA URG&Ecirc;NCIA -->
+      <section class="section section-navy section-last-urgency">
+        <div class="container centered reveal">
+          <h2 class="h2 h2-invert">N&atilde;o Perca Tempo Nem Posi&ccedil;&atilde;o no Mercado</h2>
+          <p class="lead lead-invert">Veja tudo que voc&ecirc; recebe ao garantir sua posi&ccedil;&atilde;o agora:</p>
+          <ul class="included included-invert" aria-label="Resumo">
+            <li>Acesso imediato ao Manual Solar Buy-Side</li>
+            <li>130 p&aacute;ginas + 160 t&oacute;picos</li>
+            <li>M&eacute;todo em 4 fases</li>
+            <li>Anexos t&eacute;cnicos</li>
+            <li>Apenas 1.000 unidades na Pr&eacute;-venda Profissional</li>
+          </ul>
+          <a class="btn btn-cta" href="#oferta" data-track="cta-last">QUERO SAIR NA FRENTE AGORA</a>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 14: LEAD MAGNET -->
+      <section class="section section-white">
+        <div class="container centered">
+          <div class="section-head centered reveal">
+            <h2 class="h2">Ainda Tem D&uacute;vidas Sobre o Impacto do Manual Buy-Side?</h2>
+            <p class="lead">Baixe gratuitamente nossa pr&eacute;via exclusiva.</p>
+          </div>
+
+          <div class="leadmagnet reveal">
+            <div class="leadmagnet-visual">
+              <img src="assets/img/mockup-ebook.svg" width="520" height="420" alt="Mockup do e-book gratuito" loading="lazy" decoding="async" />
+              <ul class="feature-list compact" aria-label="O que vem no e-book">
+                <li>Os 3 riscos na compra de sistemas solares</li>
+                <li>As 4 fases que o cliente segue antes de comprar</li>
+                <li>Como sua proposta ser&aacute; avaliada</li>
+                <li>&Iacute;ndice do Manual Buy-Side</li>
+              </ul>
+            </div>
+
+            <form class="form" action="#" method="post" data-form="leadmagnet">
+              <div class="form-head">
+                <h3 class="h3">Baixar pr&eacute;via gr&aacute;tis</h3>
+                <p class="body-sm">Integra&ccedil;&atilde;o do formul&aacute;rio depois.</p>
+              </div>
+              <label class="field">
+                <span>Nome</span>
+                <input name="nome" autocomplete="name" required placeholder="Seu nome" />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required placeholder="seuemail@dominio.com" />
+              </label>
+              <label class="field">
+                <span>WhatsApp</span>
+                <input name="whatsapp" inputmode="tel" autocomplete="tel" required placeholder="(00) 00000-0000" />
+              </label>
+              <button class="btn btn-green btn-full" type="submit" data-track="cta-ebook">BAIXAR EBOOK GR&Aacute;TIS AGORA</button>
+              <p class="fineprint">Ao enviar, voc&ecirc; concorda com nossa <a href="#">Pol&iacute;tica de Privacidade</a>.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 15: FAQ -->
+      <section class="section section-gray">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <h2 class="h2">Perguntas Frequentes</h2>
+          </div>
+
+          <div class="faq reveal" data-accordion>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                Como acessar meu produto?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>Ap&oacute;s confirma&ccedil;&atilde;o do pagamento, o acesso chega por email/plataforma.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                Como funciona a garantia de 7 dias?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>Voc&ecirc; pode solicitar reembolso em at&eacute; 7 dias.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                O manual &eacute; atualizado?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>Sim, conforme mercado e melhores pr&aacute;ticas.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                Posso compartilhar com minha equipe?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>O acesso &eacute; individual. Para licen&ccedil;as corporativas, fale com o suporte.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false">
+                Quais formas de pagamento?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" role="region">
+                <p>Cart&atilde;o, Pix e boleto (ajuste conforme seu checkout).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SE&Ccedil;&Atilde;O 16: CONTATO -->
+      <section class="section section-navy">
+        <div class="container centered reveal">
+          <h2 class="h2 h2-invert">Ficou com D&uacute;vidas? Fale com a Equipe Buy-Side</h2>
+          <p class="lead lead-invert">Contato r&aacute;pido para compra, acesso e suporte.</p>
+          <div class="stack stack-center">
+            <a class="btn btn-green" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">ENTRAR EM CONTATO</a>
+            <p class="fineprint fineprint-invert">
+              WhatsApp: <a class="link-invert" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">abrir</a>
+              &bull; Email: <a class="link-invert" href="mailto:contato@buyside.com.br">contato@buyside.com.br</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <img src="assets/img/logo-solar-buy-side.svg" width="160" height="28" alt="Solar Buy-Side" />
+          <p class="footer-text">
+            CNPJ: 55.463.06/0001-80<br />
+            Torre Norte &ndash; Av. Bento Munhoz da Rocha Neto, 632 &ndash; 19&ordm; Andar, Salas 1905 a 1908 &ndash; Zona 7, Maring&aacute; &ndash; PR,
+            87030-010
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title">Links &uacute;teis</h3>
+          <ul class="footer-links">
+            <li><a href="#">Pol&iacute;tica de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Prote&ccedil;&atilde;o Antipirataria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-title">Redes sociais</h3>
+          <div class="social">
+            <a class="social-btn" href="#" aria-label="Instagram">
+              <img src="assets/img/icon-instagram.svg" width="18" height="18" alt="" aria-hidden="true" />
+            </a>
+            <a class="social-btn" href="#" aria-label="LinkedIn">
+              <img src="assets/img/icon-linkedin.svg" width="18" height="18" alt="" aria-hidden="true" />
+            </a>
+            <a class="social-btn" href="#" aria-label="YouTube">
+              <img src="assets/img/icon-youtube.svg" width="18" height="18" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p class="footer-text">&copy; 2025 Buy-Side Solu&ccedil;&otilde;es. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <div class="mobile-cta" data-mobile-cta>
+      <div class="mobile-cta-inner">
+        <span class="mobile-cta-text">Pronto para sair da guerra de pre&ccedil;os?</span>
+        <a class="btn btn-cta btn-sm" href="#oferta">Garantir</a>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript">Habilite JavaScript para animac&otilde;es e FAQ (o conte&uacute;do continua vis&iacute;vel).</div>
+    </noscript>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

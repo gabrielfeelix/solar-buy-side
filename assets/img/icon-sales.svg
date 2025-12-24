@@ -1,0 +1,8 @@
+<svg width="44" height="44" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vendas">
+  <g fill="none" stroke="#0A2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 38V10h28v28H10z" />
+    <path d="M16 30l6-8 6 4 6-10" />
+    <path d="M16 18h6" />
+  </g>
+</svg>
+

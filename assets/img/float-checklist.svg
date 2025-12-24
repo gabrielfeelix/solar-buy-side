@@ -1,0 +1,17 @@
+<svg width="180" height="120" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Checklist">
+  <rect x="14" y="14" width="152" height="92" rx="14" fill="#FFFFFF" stroke="rgba(10,37,64,0.12)" />
+  <g font-family="Inter, Arial, sans-serif" fill="#0A2540">
+    <text x="28" y="40" font-size="12" font-weight="800">Checklist</text>
+  </g>
+  <g stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 56l6 6 12-14" />
+    <path d="M30 74l6 6 12-14" />
+    <path d="M30 92l6 6 12-14" />
+  </g>
+  <g stroke="rgba(10,37,64,0.22)" stroke-width="2" stroke-linecap="round">
+    <path d="M56 56h90" />
+    <path d="M56 74h78" />
+    <path d="M56 92h86" />
+  </g>
+</svg>
+

@@ -1,0 +1,29 @@
+{
+  "name": "solar-buy-side",
+  "version": "1.0.0",
+  "description": "Landing page do infoproduto **Manual Solar Buy-Side** (HTML/CSS/JS puro, sem build).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielfeelix/solar-buy-side.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gabrielfeelix/solar-buy-side/issues"
+  },
+  "homepage": "https://github.com/gabrielfeelix/solar-buy-side#readme",
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
