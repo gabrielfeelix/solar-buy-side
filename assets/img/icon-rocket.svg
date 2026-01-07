@@ -1,0 +1,9 @@
+<svg width="44" height="44" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Foguete">
+  <g fill="none" stroke="#0A2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 6c10 2 14 10 14 20-10 0-18-4-20-14l6-6z" />
+    <path d="M22 14l12 12" />
+    <path d="M12 28c4-4 10-4 14 0-4 4-10 4-14 0z" />
+    <path d="M10 38l6-6" />
+  </g>
+</svg>
+

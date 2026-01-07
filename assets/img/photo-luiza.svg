@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Foto da Luiza (placeholder)">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDB813" />
+      <stop offset="1" stop-color="#FF6B35" />
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#g)" />
+  <circle cx="64" cy="58" r="22" fill="rgba(255,255,255,0.88)" />
+  <path d="M26 112c8-22 26-30 38-30s30 8 38 30" fill="rgba(255,255,255,0.88)" />
+  <text x="64" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#0A2540">
+    L
+  </text>
+</svg>
+

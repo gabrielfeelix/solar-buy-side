@@ -1,0 +1,35 @@
+<svg width="640" height="520" viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mockup 3D do Manual Solar Buy-Side">
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A2540" />
+      <stop offset="1" stop-color="#071A2D" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDB813" />
+      <stop offset="1" stop-color="#FF6B35" />
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="640" height="520" fill="none" />
+  <g filter="url(#shadow)" transform="translate(120,70)">
+    <path d="M60 40 L330 0 L350 320 L80 360 Z" fill="url(#cover)" stroke="rgba(255,255,255,0.10)" stroke-width="2" />
+    <path d="M330 0 L392 18 L410 340 L350 320 Z" fill="#0F355B" stroke="rgba(255,255,255,0.10)" stroke-width="2" />
+    <path d="M60 40 L80 360 L142 378 L122 58 Z" fill="#0B2B4D" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+    <path d="M92 92 L296 62 L306 266 L102 294 Z" fill="rgba(255,255,255,0.06)" />
+    <path d="M102 314 L280 292 L284 332 L106 354 Z" fill="url(#accent)" opacity="0.9" />
+    <g fill="#FFFFFF" font-family="Inter, Arial, sans-serif">
+      <text x="110" y="130" font-size="16" font-weight="700" opacity="0.85">MANUAL</text>
+      <text x="110" y="168" font-size="28" font-weight="900" letter-spacing="-0.4">Solar Buy-Side</text>
+      <text x="110" y="204" font-size="14" font-weight="600" opacity="0.78">Guia tatico para vender</text>
+      <text x="110" y="224" font-size="14" font-weight="600" opacity="0.78">sem guerra de precos</text>
+    </g>
+    <g stroke="rgba(255,255,255,0.18)" stroke-width="2">
+      <path d="M118 252h160" />
+      <path d="M118 272h130" />
+      <path d="M118 292h148" />
+    </g>
+  </g>
+</svg>
+

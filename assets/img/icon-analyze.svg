@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Analisar">
+  <g fill="none" stroke="#0A2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 38V10" />
+    <path d="M10 38h30" />
+    <path d="M16 34V22" />
+    <path d="M24 34V16" />
+    <path d="M32 34V26" />
+  </g>
+</svg>
+

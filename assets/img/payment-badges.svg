@@ -1,0 +1,17 @@
+<svg width="520" height="48" viewBox="0 0 520 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Formas de pagamento">
+  <defs>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDB813" />
+      <stop offset="1" stop-color="#FF6B35" />
+    </linearGradient>
+  </defs>
+  <rect width="520" height="48" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" />
+  <g font-family="Inter, Arial, sans-serif" font-weight="800" fill="rgba(255,255,255,0.88)">
+    <text x="20" y="30" font-size="14">VISA</text>
+    <text x="120" y="30" font-size="14">MASTERCARD</text>
+    <text x="280" y="30" font-size="14">PIX</text>
+    <text x="360" y="30" font-size="14">BOLETO</text>
+  </g>
+  <rect x="462" y="12" width="40" height="24" rx="8" fill="url(#chip)" opacity="0.9" />
+</svg>
+
