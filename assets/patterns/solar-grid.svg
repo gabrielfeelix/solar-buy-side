@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1" />
+      <circle cx="0" cy="0" r="1.6" fill="#FFFFFF" fill-opacity="0.55" />
+      <circle cx="48" cy="48" r="1.6" fill="#FFFFFF" fill-opacity="0.55" />
+    </pattern>
+    <radialGradient
+      id="fade"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(420 240) rotate(90) scale(360 520)"
+    >
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)" opacity="0.9" />
+  <rect width="800" height="600" fill="url(#fade)" />
+</svg>
+
