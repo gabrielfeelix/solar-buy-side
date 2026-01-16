@@ -2,8 +2,8 @@ body {
   font-family: var(--font-primary);
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
-  color: var(--color-neutral-800);
-  background: var(--color-white);
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 h1,
@@ -43,11 +43,11 @@ p {
   position: absolute;
   left: var(--space-4);
   top: var(--space-4);
-  background: var(--color-white);
-  color: var(--color-primary-900);
+  background: var(--color-surface-strong);
+  color: var(--color-text);
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
   transform: translateY(-200%);
   transition: transform var(--transition-base);
   z-index: calc(var(--z-header) + 1);

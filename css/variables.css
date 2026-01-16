@@ -18,19 +18,31 @@
   --color-success-500: #4ade80;
 
   /* Neutrals */
-  --color-neutral-50: #f9fafb;
-  --color-neutral-100: #f3f4f6;
-  --color-neutral-200: #e5e7eb;
-  --color-neutral-300: #d1d5db;
-  --color-neutral-400: #9ca3af;
-  --color-neutral-500: #6b7280;
-  --color-neutral-600: #4b5563;
-  --color-neutral-700: #374151;
-  --color-neutral-800: #1f2937;
-  --color-neutral-900: #111827;
+  --color-neutral-50: #0b0f16;
+  --color-neutral-100: #101621;
+  --color-neutral-200: #1a2230;
+  --color-neutral-300: #273142;
+  --color-neutral-400: #3a475c;
+  --color-neutral-500: #556079;
+  --color-neutral-600: #7c879b;
+  --color-neutral-700: #a5afbf;
+  --color-neutral-800: #d7dee9;
+  --color-neutral-900: #f4f7fb;
 
   --color-white: #ffffff;
   --color-black: #0a0a0a;
+
+  /* Dark Theme Surfaces */
+  --color-bg: #07090e;
+  --color-bg-alt: #0c1118;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-strong: rgba(255, 255, 255, 0.08);
+  --color-surface-glass: rgba(14, 18, 26, 0.82);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-strong: rgba(255, 255, 255, 0.2);
+  --color-text: #f5f7fb;
+  --color-text-muted: #a5afbf;
+  --color-text-soft: #7f8aa0;
 
   /* Font Families */
   --font-primary: "DM Sans", "Segoe UI", sans-serif;
@@ -108,9 +120,9 @@
   --transition-slow: 500ms ease;
 
   /* Misc */
-  --header-height: 80px;
+  --header-height: 88px;
   --z-header: 1000;
-  --ring: 0 0 0 4px rgba(255, 107, 53, 0.22);
+  --ring: 0 0 0 4px rgba(253, 184, 19, 0.24);
 }
 
 @media (max-width: 768px) {
