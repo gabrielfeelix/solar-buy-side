@@ -167,122 +167,166 @@
     setActiveCard(0);
   }
 
-  // Testimonials Navigation with Infinite Scroll
-  const testimonialsGrid = document.querySelector("[data-testimonials-grid]");
+  // Testimonials Navigation - Infinite Loop Carousel
+  const testimonialsTrack = document.querySelector("[data-testimonials-grid]");
   const prevBtn = document.querySelector("[data-testimonials-prev]");
   const nextBtn = document.querySelector("[data-testimonials-next]");
 
-  if (testimonialsGrid && prevBtn && nextBtn) {
-    const cards = testimonialsGrid.querySelectorAll(".testimonials__card");
-    const cardCount = cards.length;
-    let currentIndex = 0;
+  if (testimonialsTrack && prevBtn && nextBtn) {
+    const originalCards = Array.from(testimonialsTrack.querySelectorAll(".testimonials__card"));
+    const cardCount = originalCards.length;
+    let currentIndex = cardCount; // Start at the first real card (after clones)
     let isTransitioning = false;
 
-    // Clone cards for infinite effect
-    const cloneCards = () => {
-      // Clone first and last few cards
-      cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        clone.setAttribute("aria-hidden", "true");
-        testimonialsGrid.appendChild(clone);
-      });
-      cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        clone.setAttribute("aria-hidden", "true");
-        testimonialsGrid.insertBefore(clone, testimonialsGrid.firstChild);
-      });
-    };
+    // Clone cards para efeito infinito (adiciona cópias no início e no fim)
+    originalCards.forEach(card => {
+      const cloneEnd = card.cloneNode(true);
+      testimonialsTrack.appendChild(cloneEnd);
+    });
 
-    cloneCards();
+    originalCards.forEach(card => {
+      const cloneStart = card.cloneNode(true);
+      testimonialsTrack.insertBefore(cloneStart, testimonialsTrack.firstChild);
+    });
 
-    // Get card width dynamically
     const getCardWidth = () => {
-      const firstCard = testimonialsGrid.querySelector(".testimonials__card");
+      const firstCard = testimonialsTrack.querySelector(".testimonials__card");
       if (!firstCard) return 340;
-      const style = window.getComputedStyle(firstCard);
-      const width = firstCard.offsetWidth;
-      const marginRight = parseFloat(style.marginRight) || 0;
-      const gap = 20; // gap from CSS
-      return width + gap;
+      const gap = parseFloat(window.getComputedStyle(testimonialsTrack).gap) || 20;
+      return firstCard.offsetWidth + gap;
     };
 
-    // Set initial position (after cloned cards)
-    const setInitialPosition = () => {
+    const updatePosition = (animate = true) => {
       const cardWidth = getCardWidth();
-      const offset = cardWidth * cardCount;
-      const paddingLeft = parseFloat(window.getComputedStyle(testimonialsGrid).paddingLeft) || 0;
-      testimonialsGrid.style.transition = "none";
-      testimonialsGrid.style.transform = `translateX(${-(offset - paddingLeft)}px)`;
+      const offset = cardWidth * currentIndex;
+      testimonialsTrack.style.transition = animate ? "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)" : "none";
+      testimonialsTrack.style.transform = `translateX(-${offset}px)`;
     };
 
-    setInitialPosition();
-
-    const updateScroll = (animate = true) => {
-      const cardWidth = getCardWidth();
-      const offset = cardWidth * (currentIndex + cardCount);
-      const paddingLeft = parseFloat(window.getComputedStyle(testimonialsGrid).paddingLeft) || 0;
-      testimonialsGrid.style.transition = animate ? "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)" : "none";
-      testimonialsGrid.style.transform = `translateX(${-(offset - paddingLeft)}px)`;
-    };
+    // Posição inicial (primeiro card real, após os clones)
+    updatePosition(false);
 
     const handleTransitionEnd = () => {
-      isTransitioning = false;
-      const cardWidth = getCardWidth();
-
-      // If we've scrolled past the original cards, jump back
-      if (currentIndex >= cardCount) {
-        currentIndex = 0;
-        updateScroll(false);
-      } else if (currentIndex < 0) {
-        currentIndex = cardCount - 1;
-        updateScroll(false);
+      // Loop infinito: se passou do último clone, volta pro primeiro real
+      if (currentIndex >= cardCount * 2) {
+        currentIndex = cardCount;
+        updatePosition(false);
       }
+      // Se passou do primeiro clone, volta pro último real
+      else if (currentIndex < cardCount) {
+        currentIndex = cardCount * 2 - 1;
+        updatePosition(false);
+      }
+
+      isTransitioning = false;
     };
 
-    testimonialsGrid.addEventListener("transitionend", handleTransitionEnd);
+    testimonialsTrack.addEventListener("transitionend", handleTransitionEnd);
 
     const scrollNext = () => {
       if (isTransitioning) return;
       isTransitioning = true;
       currentIndex++;
-      updateScroll();
+      updatePosition(true);
     };
 
     const scrollPrev = () => {
       if (isTransitioning) return;
       isTransitioning = true;
       currentIndex--;
-      updateScroll();
+      updatePosition(true);
     };
 
     nextBtn.addEventListener("click", scrollNext);
     prevBtn.addEventListener("click", scrollPrev);
 
-    // Touch/swipe support for mobile
+    // Touch/swipe support
     let touchStartX = 0;
     let touchEndX = 0;
 
-    testimonialsGrid.addEventListener("touchstart", (e) => {
+    testimonialsTrack.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
 
-    testimonialsGrid.addEventListener("touchend", (e) => {
+    testimonialsTrack.addEventListener("touchend", (e) => {
       touchEndX = e.changedTouches[0].screenX;
       const diff = touchStartX - touchEndX;
       if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          scrollNext();
-        } else {
-          scrollPrev();
-        }
+        if (diff > 0) scrollNext();
+        else scrollPrev();
       }
     }, { passive: true });
 
     // Reset on resize
     window.addEventListener("resize", () => {
-      setInitialPosition();
-      currentIndex = 0;
+      currentIndex = cardCount;
+      updatePosition(false);
     });
+  }
+
+  // Processo Section - Stacking scroll with scale and blur animation
+  const processoSection = document.querySelector(".processo");
+  if (processoSection) {
+    const cards = processoSection.querySelectorAll("[data-processo-card]");
+
+    if (cards.length > 0) {
+      const updateCards = () => {
+        const sectionRect = processoSection.getBoundingClientRect();
+        const sectionTop = sectionRect.top;
+        const sectionHeight = sectionRect.height;
+        const viewportHeight = window.innerHeight;
+
+        // Progress through section (0 to 1)
+        const scrollProgress = Math.max(0, Math.min(1, -sectionTop / (sectionHeight - viewportHeight)));
+
+        cards.forEach((card, index) => {
+          const cardRect = card.getBoundingClientRect();
+          const cardTop = cardRect.top;
+          const cardCenter = cardTop + cardRect.height / 2;
+          const viewportCenter = viewportHeight / 2;
+
+          // Distance from center (-1 to 1, where 0 is centered)
+          const distanceFromCenter = (cardCenter - viewportCenter) / viewportHeight;
+
+          // Calculate scale (1 when centered, smaller when below)
+          let scale = 1;
+          if (distanceFromCenter > 0) {
+            // Card is below center - make it smaller
+            scale = Math.max(0.92, 1 - (distanceFromCenter * 0.2));
+          }
+
+          // Calculate blur (0 when centered, more when below)
+          // NEVER blur the first card (index 0)
+          let blur = 0;
+          if (index > 0 && distanceFromCenter > 0.15) {
+            // Only blur cards below center, and only when significantly below
+            blur = Math.min(4, (distanceFromCenter - 0.15) * 10);
+          }
+
+          // Calculate glow intensity (max when centered)
+          const glowIntensity = Math.max(0, 1 - Math.abs(distanceFromCenter) * 2);
+
+          // Apply transformations
+          const inner = card.querySelector(".processo__card-inner");
+          if (inner) {
+            inner.style.transform = `scale(${scale})`;
+            inner.style.filter = `blur(${blur}px)`;
+
+            // Add glow effect to active card
+            if (glowIntensity > 0.5) {
+              inner.style.boxShadow = `0 20px 60px rgba(255, 107, 53, ${glowIntensity * 0.3}), 0 0 0 1px rgba(255, 107, 53, ${glowIntensity * 0.4})`;
+            } else {
+              inner.style.boxShadow = 'none';
+            }
+          }
+        });
+      };
+
+      // Update on scroll
+      window.addEventListener("scroll", updateCards, { passive: true });
+      // Initial update
+      updateCards();
+    }
   }
 
   // Modules Grid - Animated Light Pulse along connection lines

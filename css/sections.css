@@ -6983,3 +6983,56 @@
     font-size: 14px;
   }
 }
+
+/* =============================================
+   MOBILE CRITICAL FIXES - PREVENT OVERFLOW
+   ============================================= */
+
+@media (max-width: 768px) {
+  /* Previne overflow horizontal em todo o site */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Container responsivo */
+  .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Depoimentos mobile - card único centralizado */
+  .testimonials__header {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .testimonials__header-right {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .testimonials__nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Container menor para mobile pequeno */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Títulos responsivos */
+  h1, h2, h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
