@@ -287,16 +287,49 @@
 .hero__grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: var(--space-16);
-  align-items: center;
+  grid-template-rows: auto auto auto;
+  gap: var(--space-6) var(--space-16);
+  align-items: start;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+/* Desktop: text, cta, social-proof na coluna esquerda, card na direita */
+.hero__text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero__right {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__cta {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.hero__social-proof {
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .hero__left {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
+  max-width: 640px;
+}
+
+/* Hero Text container - desktop */
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
   max-width: 640px;
 }
 
@@ -367,19 +400,19 @@
 }
 
 .hero__avatar:nth-child(1) {
-  background-image: url("/worker1.png");
+  background-image: url("/public/person1.jpg");
 }
 
 .hero__avatar:nth-child(2) {
-  background-image: url("/worker2.png");
+  background-image: url("/public/person2.jpg");
 }
 
 .hero__avatar:nth-child(3) {
-  background-image: url("/worker3.png");
+  background-image: url("/public/person3.jpg");
 }
 
 .hero__avatar:nth-child(4) {
-  background-image: url("/francis-poloni.png");
+  background-image: url("/public/person4.jpg");
 }
 
 .hero__rating {
@@ -507,21 +540,15 @@
   }
 
   .hero__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
   }
 
-  .hero__left {
-    max-width: 100%;
-  }
-
-  .hero__right {
-    order: -1;
-  }
-
-  .hero__book-card {
-    max-width: 320px;
-    margin: 0 auto;
+  /* 1. Título e subtítulo primeiro */
+  .hero__text {
+    order: 1;
+    text-align: center;
   }
 
   .hero__title {
@@ -534,14 +561,28 @@
     max-width: 480px;
   }
 
-  .hero__cta {
-    justify-content: center;
+  /* 2. Card do livro segundo */
+  .hero__right {
+    order: 2;
   }
 
+  .hero__book-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* 3. Botões terceiro */
+  .hero__cta {
+    justify-content: center;
+    order: 3;
+  }
+
+  /* 4. Social proof por último */
   .hero__social-proof {
     justify-content: center;
     border-top: none;
     padding-top: 0;
+    order: 4;
   }
 }
 
