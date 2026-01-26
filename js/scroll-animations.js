@@ -6,6 +6,35 @@
     rootMargin: "0px 0px -50px 0px",
   };
 
+  const autoAnimate = () => {
+    const selectors = [
+      ".hero__left",
+      ".hero__right",
+      ".section__header",
+      ".diagnostico__card",
+      ".solucao-scroll__header",
+      ".segmentacao__card",
+      ".processo__left",
+      ".testimonials__header",
+      ".testimonials__card",
+      ".modulos-grid__card",
+      ".metodo-bonus__card",
+      ".pricing__card",
+      ".author__photo",
+      ".author__text",
+      ".lead-magnet__benefit",
+      ".newsletter__card",
+    ];
+
+    selectors.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((el) => {
+        if (el instanceof HTMLElement && !el.hasAttribute("data-animate")) {
+          el.setAttribute("data-animate", "fade-up");
+        }
+      });
+    });
+  };
+
   const applyDelay = (element, delayMs) => {
     const explicitDelay = element.getAttribute("data-animate-delay");
     const baseDelay = explicitDelay ? Number(explicitDelay) || 0 : 0;
@@ -32,6 +61,7 @@
   };
 
   const setup = () => {
+    autoAnimate();
     const targets = Array.from(document.querySelectorAll("[data-animate], [data-stagger]"));
     if (!targets.length) return;
 

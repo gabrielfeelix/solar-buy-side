@@ -92,6 +92,8 @@
   if (solucaoSection) {
     const cards = solucaoSection.querySelectorAll("[data-scroll-card]");
     const indicators = solucaoSection.querySelectorAll(".solucao-scroll__indicator");
+    const imageWrapper = solucaoSection.querySelector(".solucao-scroll__image-wrapper");
+    const imageEl = imageWrapper?.querySelector("img");
     let currentIndex = 0;
 
     const setActiveCard = (index) => {
@@ -106,6 +108,23 @@
       indicators.forEach((dot, i) => {
         dot.classList.toggle("is-active", i === index);
       });
+
+      const nextImage = cards[index]?.getAttribute("data-image");
+      if (imageEl && nextImage && imageEl.getAttribute("src") !== nextImage) {
+        imageWrapper?.classList.add("is-swapping");
+        imageEl.style.opacity = "0";
+        window.setTimeout(() => {
+          imageEl.setAttribute("src", nextImage);
+        }, 120);
+
+        const cleanup = () => {
+          imageEl.style.opacity = "";
+          imageWrapper?.classList.remove("is-swapping");
+          imageEl.removeEventListener("load", cleanup);
+        };
+        imageEl.addEventListener("load", cleanup);
+        window.setTimeout(cleanup, 400);
+      }
     };
 
     // Click on card to activate
@@ -125,7 +144,7 @@
     // Scroll-triggered activation using IntersectionObserver
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -60% 0px",
+      rootMargin: "-25% 0px -25% 0px",
       threshold: 0
     };
 
@@ -191,8 +210,9 @@
     const setInitialPosition = () => {
       const cardWidth = getCardWidth();
       const offset = cardWidth * cardCount;
+      const paddingLeft = parseFloat(window.getComputedStyle(testimonialsGrid).paddingLeft) || 0;
       testimonialsGrid.style.transition = "none";
-      testimonialsGrid.style.transform = `translateX(${-offset}px)`;
+      testimonialsGrid.style.transform = `translateX(${-(offset - paddingLeft)}px)`;
     };
 
     setInitialPosition();
@@ -200,8 +220,9 @@
     const updateScroll = (animate = true) => {
       const cardWidth = getCardWidth();
       const offset = cardWidth * (currentIndex + cardCount);
+      const paddingLeft = parseFloat(window.getComputedStyle(testimonialsGrid).paddingLeft) || 0;
       testimonialsGrid.style.transition = animate ? "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)" : "none";
-      testimonialsGrid.style.transform = `translateX(${-offset}px)`;
+      testimonialsGrid.style.transform = `translateX(${-(offset - paddingLeft)}px)`;
     };
 
     const handleTransitionEnd = () => {
@@ -274,6 +295,7 @@
 
     if (svg && linesGroup && pulse && cards.length === 6) {
       let allPaths = [];
+      const pulseTargets = new Map();
 
       const createLines = () => {
         // Limpar linhas existentes
@@ -316,16 +338,16 @@
 
           if (conn.type === "horizontal") {
             // Linha horizontal simples
-            const startX = fromCard.right;
-            const endX = toCard.left;
+            const startX = fromCard.right + 4;
+            const endX = toCard.left - 4;
             const y = fromCard.centerY;
             pathD = `M ${startX} ${y} L ${endX} ${y}`;
           } else if (conn.type === "curve-down") {
             // Curva do card 3 para card 4 (descendo para próxima linha)
-            const startX = fromCard.right - 30;
-            const startY = fromCard.bottom;
-            const endX = toCard.left + 30;
-            const endY = toCard.top;
+            const startX = fromCard.right - 24;
+            const startY = fromCard.bottom + 4;
+            const endX = toCard.left + 24;
+            const endY = toCard.top - 4;
             const midY = (startY + endY) / 2;
 
             pathD = `M ${startX} ${startY}
@@ -340,11 +362,12 @@
           path.setAttribute("d", pathD);
           path.setAttribute("class", "modulos-grid__line");
           path.setAttribute("fill", "none");
-          path.setAttribute("stroke", "url(#lineGradient)");
-          path.setAttribute("stroke-width", "2");
+          path.setAttribute("stroke", "#FF6B35");
+          path.setAttribute("stroke-width", "2.5");
           path.setAttribute("stroke-linecap", "round");
+          path.setAttribute("stroke-linejoin", "round");
           linesGroup.appendChild(path);
-          allPaths.push(path);
+          allPaths.push({ path, from: conn.from, to: conn.to });
         });
       };
 
@@ -360,18 +383,37 @@
       const speed = 0.012;
       let animationRunning = false;
 
+      const highlightCard = (index) => {
+        const card = cards[index];
+        if (!card) return;
+        card.classList.add("is-pulse");
+        const existing = pulseTargets.get(card);
+        if (existing) window.clearTimeout(existing);
+        const timeout = window.setTimeout(() => {
+          card.classList.remove("is-pulse");
+          pulseTargets.delete(card);
+        }, 320);
+        pulseTargets.set(card, timeout);
+      };
+
       const animatePulse = () => {
         if (allPaths.length === 0 || !animationRunning) return;
 
         const currentPath = allPaths[currentPathIndex];
-        const pathLength = currentPath.getTotalLength();
-        const point = currentPath.getPointAtLength(progress * pathLength);
+        const pathLength = currentPath.path.getTotalLength();
+        const point = currentPath.path.getPointAtLength(progress * pathLength);
 
         pulse.setAttribute("cx", point.x);
         pulse.setAttribute("cy", point.y);
         pulse.style.opacity = "1";
 
         progress += speed;
+
+        if (progress <= 0.06) {
+          highlightCard(currentPath.from);
+        } else if (progress >= 0.94) {
+          highlightCard(currentPath.to);
+        }
 
         if (progress >= 1) {
           progress = 0;
