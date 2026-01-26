@@ -400,19 +400,19 @@
 }
 
 .hero__avatar:nth-child(1) {
-  background-image: url("/public/person1.jpg");
+  background-image: url("/person1.jpg");
 }
 
 .hero__avatar:nth-child(2) {
-  background-image: url("/public/person2.jpg");
+  background-image: url("/person2.jpg");
 }
 
 .hero__avatar:nth-child(3) {
-  background-image: url("/public/person3.jpg");
+  background-image: url("/person3.jpg");
 }
 
 .hero__avatar:nth-child(4) {
-  background-image: url("/public/person4.jpg");
+  background-image: url("/person4.jpg");
 }
 
 .hero__rating {
