@@ -1868,20 +1868,9 @@
   }
 }
 
-.pricing {
+.pricing--legacy {
   background: var(--dark-bg);
   position: relative;
-}
-
-.pricing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(ellipse 800px 400px at 50% 30%, rgba(255, 107, 53, 0.08), transparent 60%);
-  pointer-events: none;
 }
 
 .pricing--secondary {
@@ -4844,35 +4833,7 @@
   overflow: hidden;
 }
 
-.pricing::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(ellipse 800px 500px at 50% 0%, rgba(255, 107, 53, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 600px 400px at 30% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
-  pointer-events: none;
-}
-
-/* Decorative glow ring */
-.pricing::after {
-  content: '';
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background:
-    radial-gradient(circle, transparent 40%, rgba(255, 107, 53, 0.06) 50%, transparent 60%);
-  pointer-events: none;
-}
+/* Removed decorative orange elements */
 
 .pricing .container {
   max-width: 1100px;

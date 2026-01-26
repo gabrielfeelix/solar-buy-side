@@ -1,4 +1,9 @@
 (function () {
+  // Apply data-bg backgrounds
+  document.querySelectorAll("[data-bg]").forEach(el => {
+    el.style.backgroundImage = `url('${el.dataset.bg}')`;
+  });
+
   const header = document.getElementById("header");
   const setHeaderState = () => {
     if (!header) return;
